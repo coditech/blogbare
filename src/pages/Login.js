@@ -1,6 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
+import SessionContext from "../context/SessionContext";
 
 export default function Login() {
+  const {
+    actions: { login },
+  } = useContext(SessionContext);
   const [state, setValue] = useState({
     email: "",
     password: "",
@@ -22,6 +26,7 @@ export default function Login() {
 
   async function handleSubmit(e) {
     e.nativeEvent.preventDefault();
+    login(email, password);
   }
   return (
     <section class="single-blog-area">

@@ -1,7 +1,14 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import SessionContext from "../context/SessionContext";
 
 export default function Header() {
+  const {
+    session: {
+      user: { access_token },
+    },
+    actions: { logout },
+  } = useContext(SessionContext);
   return (
     <header className="header">
       <div className="container">
@@ -19,19 +26,25 @@ export default function Header() {
                 <li className="active">
                   <Link to="/">Home</Link>
                 </li>
-                <li>
-                  <Link to="/createblog">Create Blog</Link>
-                </li>
+                {access_token && (
+                  <li>
+                    <Link to="/createblog">Create Blog</Link>
+                  </li>
+                )}
 
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
+                {!access_token && (
+                  <li>
+                    <Link to="/login">Login</Link>
+                  </li>
+                )}
 
-                <li>
-                  <a>
-                    <div>Logout</div>
-                  </a>
-                </li>
+                {access_token && (
+                  <li>
+                    <a>
+                      <div onClick={() => logout()}>Logout</div>
+                    </a>
+                  </li>
+                )}
               </ul>
             </div>
           </div>
