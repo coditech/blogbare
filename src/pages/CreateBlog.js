@@ -1,5 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
+import BlogContext from "../context/BlogContext";
+
 export default function CreateBlog() {
+  const { actions: {createBlog} } = useContext(BlogContext);
+
   const [state, setValue] = useState({
     title: "",
     content: "",
@@ -20,6 +24,7 @@ export default function CreateBlog() {
 
   async function handleSubmit(e) {
     e.nativeEvent.preventDefault();
+    createBlog(title, content);
   }
 
   return (

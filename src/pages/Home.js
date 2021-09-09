@@ -1,9 +1,12 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import BlogContext from "../context/BlogContext";
 export default function Home() {
+  const {
+    state: { blogs },
+  } = useContext(BlogContext);
   return (
     <>
-       <section className="bg-text-area">
+      <section className="bg-text-area">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -26,182 +29,19 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="blog-post-area-style">
-              <div className="col-md-3">
-                <div className="single-post">
-                  <img src="img/post-image2.jpg" alt="" />
-                  <h3>
-                    <a href="#">Post Title Goes Here.</a>
-                  </h3>
-                  <h4>
-                    <span>
-                      Posted By:{" "}
-                      <span className="author-name">Kabbo Liate</span>
-                    </span>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed dotempor incididunt ut. labore et dolore magna aliqua.
-                    Ut enim ad minim veniam
-                  </p>
-                  <h4>
-                    <span>25 February 2017</span>
-                  </h4>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-post">
-                  <img src="img/post-image3.jpg" alt="" />
-                  <h3>
-                    <a href="#">Post Title Goes Here.</a>
-                  </h3>
-                  <h4>
-                    <span>
-                      Posted By:{" "}
-                      <span className="author-name">Kabbo Liate</span>
-                    </span>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed dotempor incididunt ut. labore et dolore magna aliqua.
-                    Ut enim ad minim veniam
-                  </p>
-                  <h4>
-                    <span>25 February 2017</span>
-                  </h4>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-post">
-                  <img src="img/post-image4.jpg" alt="" />
-                  <h3>
-                    <a href="#">Post Title Goes Here.</a>
-                  </h3>
-                  <h4>
-                    <span>
-                      Posted By:{" "}
-                      <span className="author-name">Kabbo Liate</span>
-                    </span>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed dotempor incididunt ut. labore et dolore magna aliqua.
-                    Ut enim ad minim veniam
-                  </p>
-                  <h4>
-                    <span>25 February 2017</span>
-                  </h4>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-post">
-                  <img src="img/post-image5.jpg" alt="" />
-                  <h3>
-                    <a href="#">Post Title Goes Here.</a>
-                  </h3>
-                  <h4>
-                    <span>
-                      Posted By:{" "}
-                      <span className="author-name">Kabbo Liate</span>
-                    </span>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed dotempor incididunt ut. labore et dolore magna aliqua.
-                    Ut enim ad minim veniam
-                  </p>
-                  <h4>
-                    <span>25 February 2017</span>
-                  </h4>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-post">
-                  <img src="img/post-image6.jpg" alt="" />
-                  <h3>
-                    <a href="#">Post Title Goes Here.</a>
-                  </h3>
-                  <h4>
-                    <span>
-                      Posted By:{" "}
-                      <span className="author-name">Kabbo Liate</span>
-                    </span>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed dotempor incididunt ut. labore et dolore magna aliqua.
-                    Ut enim ad minim veniam
-                  </p>
-                  <h4>
-                    <span>25 February 2017</span>
-                  </h4>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-post">
-                  <img src="img/post-image7.jpg" alt="" />
-                  <h3>
-                    <a href="#">Post Title Goes Here.</a>
-                  </h3>
-                  <h4>
-                    <span>
-                      Posted By:{" "}
-                      <span className="author-name">Kabbo Liate</span>
-                    </span>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed dotempor incididunt ut. labore et dolore magna aliqua.
-                    Ut enim ad minim veniam
-                  </p>
-                  <h4>
-                    <span>25 February 2017</span>
-                  </h4>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-post">
-                  <img src="img/post-image8.jpg" alt="" />
-                  <h3>
-                    <a href="#">Post Title Goes Here.</a>
-                  </h3>
-                  <h4>
-                    <span>
-                      Posted By:{" "}
-                      <span className="author-name">Kabbo Liate</span>
-                    </span>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed dotempor incididunt ut. labore et dolore magna aliqua.
-                    Ut enim ad minim veniam
-                  </p>
-                  <h4>
-                    <span>25 February 2017</span>
-                  </h4>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-post">
-                  <img src="img/post-image9.jpg" alt="" />
-                  <h3>
-                    <a href="#">Post Title Goes Here.</a>
-                  </h3>
-                  <h4>
-                    <span>
-                      Posted By:{" "}
-                      <span className="author-name">Kabbo Liate</span>
-                    </span>
-                  </h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed dotempor incididunt ut. labore et dolore magna aliqua.
-                    Ut enim ad minim veniam
-                  </p>
-                  <h4>
-                    <span>25 February 2017</span>
-                  </h4>
-                </div>
-              </div>
+              {blogs &&
+                blogs.map((blog) => (
+                  <div className="col-md-6">
+                    <div className="single-post">
+                      <img src="img/post-image1.jpg" alt="" />
+                      <h3>
+                        <a href="#">{blog.title}</a>
+                      </h3>
+
+                      <p>{blog.content}</p>
+                    </div>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
